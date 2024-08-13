@@ -1,6 +1,7 @@
 
 import requests
 import json
+import time
 
 def split_message(message):
         smaller = message['embeds'][0]['description']
@@ -27,7 +28,7 @@ def Make_Url_For_SpooferPor(coords):
 
 def retrive_messages(channelid,detail):
     headers = {
-        'authorization': 'NjkxOTgxMzMxNDc0ODA4ODMz.G-A2mw.tBLzqwmQ0vl5_13g3eftUu627g3NLfEeH6HiCw'
+        'authorization': 'MTI3MjczODYxMjI3Nzk0MDI4Ng.GQNG-7.NJywOLu95D2an2kgC_d1qSXVpGt0VJZuglVsWc'
     }
     l = requests.get(f"https://discord.com/api/v8/channels/{channelid}/messages",headers=headers)
     messagejson = json.loads(l.text)
@@ -35,12 +36,13 @@ def retrive_messages(channelid,detail):
     message = messagejson[0]
     if detail == "generall":
         url = split_message(message)
-        print(url)
         coords = Get_Coords_with_Link(url)
         copyurl = Make_Url_For_SpooferPor(coords)
-        file = open("url.txt","w")
+        file = open("url.txt","w+")
         file.write(copyurl)
-        print(coords,copyurl)
+        file.close()
+        file = open("url.txt","r")
+        print("Update:",file.read())
     
     
         

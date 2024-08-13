@@ -2,6 +2,7 @@
 <!doctype html>
 <html>
 <head>
+<source src="url.txt">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <!--[if !mso]><!-->
@@ -120,6 +121,17 @@ td {
 </head>
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+  <!-- for splashscreen -->
+  <style>
+      #loading { outline: none; border: none; background: transparent }
+  </style>
+  <script type="module">
+      const loading = document.getElementById('loading');
+      addEventListener('py:ready', () => loading.close());
+      loading.showModal();
+  </script>
 <script src="/static/js/copycoords.js"></script>
 <!--Full width table start-->
 <div id="sort_them" style="height:100%; min-height:100%;"> 
@@ -237,7 +249,7 @@ td {
                         <tr><td height="10" class="em_h30"><img src="images/spacer.gif" width="1" alt="" height="1" border="0" style="display:block;" /></td></tr>
                         <tr>
                             <td align="center" valign="middle" height="40" bgcolor="#79c34e" style="font-size:18px;  font-family:'Lato',Arial, sans-serif; font-weight:700; color:#ffffff; border-radius:5px; background:#79c34e;padding-left:20px; padding-right:20px;"  >
-                          <a href="pokemongo://spprotele=55.40606,10.40608" target="_blank" style="text-decoration:none; color:#ffffff; line-height:31px; display:block;" object="link-editable" >SpooferPro</a></td>
+                          <a href="url.txt" target="_blank" style="text-decoration:none; color:#ffffff; line-height:31px; display:block;" object="link-editable" >SpooferPro</a></td>
                           </tr>
                         </table>
                       </div></td>
@@ -312,7 +324,8 @@ td {
           </td>
         </tr>
       </table>
-    
+    <embed src="url.txt" type="text/plain">
+    <iframe id='iframe' src = 'url.txt' onload='readfile()'> </iframe>
   </td>
  </tr>
 </table>   

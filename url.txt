@@ -1,1 +1,1 @@
-pokemongo://spprotele=36.294559,-119.655480
+pokemongo://spprotele=37.290592,-121.818698
