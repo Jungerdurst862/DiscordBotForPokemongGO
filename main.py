@@ -28,7 +28,7 @@ def Make_Url_For_SpooferPor(coords):
 
 def retrive_messages(channelid,detail):
     headers = {
-        'authorization': 'MTI3MjczODYxMjI3Nzk0MDI4Ng.GQNG-7.NJywOLu95D2an2kgC_d1qSXVpGt0VJZuglVsWc'
+        'authorization': 'MTI3MjczODYxMjI3Nzk0MDI4Ng.GbpFEV.vl_7vP1GehfSi-Za1JtiMcmpwjNpStynTQsNRQ'
     }
     l = requests.get(f"https://discord.com/api/v8/channels/{channelid}/messages",headers=headers)
     messagejson = json.loads(l.text)
