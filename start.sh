@@ -6,6 +6,7 @@ while true; do
     cd /home/paul/Documents/DiscordBotForPokemongGO
     python3 main.py
     coordsurl=$(cat 'url.txt')
+    send exit/r
     cd ..
     ls
     sleep 5
